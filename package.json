@@ -1,5 +1,5 @@
 {
-  "name": "ignafab 2",
+  "name": "ignafab3",
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
@@ -14,7 +14,11 @@
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "date-fns": "^3.6.0",
+    "dotenv": "^16.4.5",
+    "mongoose": "^6.5.0",
+    "mongoose-sequence": "^5.3.1",
     "express": "^4.19.2",
+    "mongodb": "^6.7.0",
     "uuid": "^10.0.0"
   },
   "devDependencies": {
