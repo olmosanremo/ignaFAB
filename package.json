@@ -1,5 +1,5 @@
 {
-  "name": "ignafab3",
+  "name": "ignafab4",
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
@@ -11,14 +11,16 @@
   "license": "ISC",
   "description": "scaffold front and back MERN",
   "dependencies": {
+    "bcrypt": "^5.1.1",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "date-fns": "^3.6.0",
     "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-async-handler": "^1.2.0",
+    "mongodb": "^6.7.0",
     "mongoose": "^6.5.0",
     "mongoose-sequence": "^5.3.1",
-    "express": "^4.19.2",
-    "mongodb": "^6.7.0",
     "uuid": "^10.0.0"
   },
   "devDependencies": {
