@@ -6,11 +6,11 @@ const bcrypt = require('bcrypt')
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-// @desc Get all users
-// @route GET /users
+// @desc Get all notes
+// @route GET /notes
 // @access Private
-const getAllUsers = asyncHandler(async (req, res) => {
-    const users = await User.find().select('-password').lean()
+const getAllNotes = asyncHandler(async (req, res) => {
+    const notes = await User.find().select('-password').lean()
     if (!users?.length) {
         return res.status(400).json({ message: 'No users found' })
     }
@@ -18,8 +18,8 @@ const getAllUsers = asyncHandler(async (req, res) => {
 })
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-// @desc Create new user
-// @route POST /users
+// @desc Create new note
+// @route POST /notes
 // @access Private
 const createNewUser = asyncHandler(async (req, res) => {
     const { username, password, roles } = req.body
@@ -58,8 +58,8 @@ const createNewUser = asyncHandler(async (req, res) => {
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
-// @desc UPDATE user
-// @route PATCH /users
+// @desc UPDATE note
+// @route PATCH /notes
 // @access Private
 const updateUser = asyncHandler(async (req, res) => {
     const { id, username, roles, active, password } = req.body
@@ -100,8 +100,8 @@ const updateUser = asyncHandler(async (req, res) => {
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
-// @desc DELETE user
-// @route DELETE /users
+// @desc DELETE note
+// @route DELETE /notes
 // @access Private
 const deleteUser = asyncHandler(async (req, res) => {
     const { id} = req.body
